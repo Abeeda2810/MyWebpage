@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abeedah - Web Developer</title>
+    <!-- Link to External CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="nav-header">
+        <div class="nav-brand">
+            <img src="profile-picture.jpg" alt="Logo">
+        </div>
+        <i class="fa fa-bars fa-3x"></i>
+        <div class="header-links">
+            <ul>
+                <li><a href="#contact">CONTACT</a></li>
+                <li><a href="#portfolio">PORTFOLIO</a></li>
+                <li><a href="#about">ABOUT</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section aboutme" data-anchor="aboutme">
+        <div class="opaque-bg animated fadeInDown">
+            <h1 style="color:white">Abeedah <span style="color:#FF6363">/</span> Web Developer</h1>
+            <p><button onclick="changeText()">Click to change text</button></p>
+        </div>
+    </div>
+
+    <div class="section" data-anchor="skills">
+        <div class="content">
+            <h1 class="wow fadeInDown" data-wow-delay="0.2s">ABOUT ME</h1>
+            <p class="wow fadeInDown" data-wow-delay="0.2s">Hi, I'm Abeedah! I'm a passionate Web Developer focused on creating clean, responsive, and user-friendly web designs and applications.</p>
+            <div class="wow fadeInUp container-skillbar" data-wow-delay="0.2s">
+                <div class="skillbar clearfix" data-percent="90%">
+                    <div class="skillbar-title" style="background: #DD1E2F;"><span>HTML5</span></div>
+                    <div class="skillbar-bar" style="background: #DD1E2F;"></div>
+                    <div class="skill-bar-percent">90%</div>
+                </div>
+
+                <div class="skillbar clearfix" data-percent="80%">
+                    <div class="skillbar-title" style="background: #EBB035;"><span>CSS3</span></div>
+                    <div class="skillbar-bar" style="background: #EBB035;"></div>
+                    <div class="skill-bar-percent">80%</div>
+                </div>
+
+                <div class="skillbar clearfix" data-percent="75%">
+                    <div class="skillbar-title" style="background: #218559;"><span>JavaScript</span></div>
+                    <div class="skillbar-bar" style="background: #218559;"></div>
+                    <div class="skill-bar-percent">75%</div>
+                </div>
+
+                <div class="skillbar clearfix" data-percent="70%">
+                    <div class="skillbar-title" style="background: #06A2CB;"><span>React</span></div>
+                    <div class="skillbar-bar" style="background: #06A2CB;"></div>
+                    <div class="skill-bar-percent">70%</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section" data-anchor="projects">
+        <div class="content-slide">
+            <div class="slide">
+                <h1 class="wow fadeInDown" data-wow-delay="0.2s">My Project 1</h1>
+                <p class="wow fadeInDown" data-wow-delay="0.2s">An innovative website for a digital product.</p>
+                <img class="wow fadeInUp" data-wow-delay="0.2s" src="https://via.placeholder.com/400">
+            </div>
+            <div class="slide">
+                <h1>My Project 2</h1>
+                <p>A creative blog website I built with HTML and CSS.</p>
+                <img src="https://via.placeholder.com/400">
+            </div>
+        </div>
+    </div>
+
+    <div class="section" data-anchor="contact">
+        <div class="content wow fadeInDown" data-wow-delay="0.2s">
+            <h1>CONTACT ME</h1>
+            <p>If you're interested in collaborating or just want to say hi, feel free to reach out!</p>
+            <br>
+            <div class="contact-form">
+                <div id="form-messages"></div>
+                <form id="ajax-contact" method="post" role="form" action="contact.php">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="name" name="name" placeholder="NAME" required>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="email" class="form-control" id="email" name="email" placeholder="EMAIL" required>
+                    </div>
+
+                    <div class="form-group">
+                        <textarea class="form-control" id="message" name="message" placeholder="MESSAGE" required></textarea>
+                    </div>
+
+                    <div>
+                        <button type="submit" id="submit" name="submit" class="btn btn-lg">SEND MESSAGE</button>
+                    </div>
+                </form>
+                <br>
+            </div>
+        </div>
+    </div>
+
+            <footer class="footer text-center">
+                <div class="container">
+                    <p>Connect with me:</p>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <p>&copy; 2024 My Portfolio. All Rights Reserved.</p>
+                </div>
+            </footer>
+    </div>
+
+    <!-- Link to External JavaScript -->
+    
+</body>
+</html>

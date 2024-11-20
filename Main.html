@@ -1,0 +1,344 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Stylish Webpage</title>
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* General styling */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f3ff; /* Light lilac */
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: palevioletred; /* Light purple */
+            padding: 10px 20px;
+            color: white;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: skyblue; /* Purple */
+        }
+
+        .navbar a {
+            color: yellow; /* Purple */
+            text-decoration: none;
+            padding: 10px 15px;
+            font-weight: bold;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            color: #ff4081; /* Pink */
+        }
+
+        .navbar .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .navbar .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: lightslategrey;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            min-width: 150px;
+            z-index: 1;
+        }
+
+        .navbar .dropdown-content a {
+            color: yellow;
+            padding: 10px 15px;
+            text-decoration: none;
+            display: block;
+            font-size: 14px;
+        }
+
+        .navbar .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .navbar .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-image: url('helloww.jpg'); /* Replace 'helloww.jpg' with the path to your image */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: white;
+            padding: 120px 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero h1 {
+            font-size: 60px;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero p {
+            font-size: 22px;
+            margin-top: 10px;
+        }
+
+        .hero button {
+            background-color: #ff4081; /* Pink */
+            color: white;
+            font-size: 20px;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .hero button:hover {
+            background-color: #ff80ab; /* Lighter Pink */
+            transform: translateY(-5px);
+        }
+
+        /* Stylish Customers Section */
+        .customers {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #ffffff;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .customers .card {
+            background-color: #ff80ab; /* Light Pink */
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            width: 180px;
+            text-align: center;
+        }
+
+        .customers .card i {
+            font-size: 40px;
+            margin-bottom: 15px;
+            color: yellow; /* Purple */
+        }
+
+        .customers .card h3 {
+            font-size: 22px;
+            margin: 10px 0;
+        }
+
+        /* Client Feedback Section */
+        .feedback {
+            background-color: #f8f3ff; /* Light Lilac */
+            padding: 50px 20px;
+        }
+
+        .feedback h2 {
+            text-align: center;
+            font-size: 36px;
+            color: #7e57c2; /* Purple */
+        }
+
+        .feedback .card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 15px auto;
+            max-width: 600px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+        }
+
+        .feedback .card .client-profile {
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            margin-right: 20px;
+            overflow: hidden;
+            object-fit: cover;
+        }
+
+        .feedback .card p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #7e57c2; /* Purple */
+        }
+
+        .feedback .card .client-name {
+            font-weight: bold;
+            font-size: 18px;
+            color: palevioletred;
+            margin-top: 10px;
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #E75480; /* Purple */
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 50px;
+        }
+
+        footer .social-icons a {
+            color: yellow; /* Light Pink */
+            font-size: 25px;
+            margin: 0 10px;
+            transition: transform 0.3s ease;
+        }
+
+        footer .social-icons a:hover {
+            transform: scale(1.2);
+        }
+
+        footer p {
+            margin: 10px 0;
+            font-size: 14px;
+        }
+
+        /* Scroll to Top Button */
+        #scrollTopBtn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #ff4081; /* Pink */
+            color: white;
+            padding: 12px 18px;
+            border-radius: 50%;
+            font-size: 20px;
+            border: none;
+            display: none;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #scrollTopBtn:hover {
+            background-color: #ff80ab; /* Lighter Pink */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <div class="logo">MyWeb</div>
+        <div>
+            <a href="main.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="skills.html">Skills</a>
+            <div class="dropdown">
+                <a href="#">More</a>
+                <div class="dropdown-content">
+                    <a href="contact.html">Contact</a>
+                    <a href="Timeline.html">Timeline</a>
+                    <a href="Hobbies..html">Hobbies</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>Welcome to Abeedah's Webpage</h1>
+        <p>Where creativity meets functionality!</p>
+        <button>Explore Now</button>
+    </div>
+
+    <!-- Stylish Satisfied Customers Section -->
+    <div class="customers">
+        <div class="card">
+            <i class="fas fa-project-diagram"></i>
+            <h3>Total Projects</h3>
+            <p>1000+ Completed</p>
+        </div>
+        <div class="card">
+            <i class="fas fa-trophy"></i>
+            <h3>Awards</h3>
+            <p>20+ Received</p>
+        </div>
+        <div class="card">
+            <i class="fas fa-users"></i>
+            <h3>Satisfied Customers</h3>
+            <p>1000+ Happy Clients</p>
+        </div>
+    </div>
+
+    <!-- Client Feedback Section -->
+    <div class="feedback">
+        <h2>What Our Clients Say</h2>
+        <div class="card">
+            <div class="client-profile">
+                <img src="light-pastel.jpg" alt="Client 1"> <!-- Replace with actual client image -->
+            </div>
+            <div>
+                <p>"The designs exceeded my expectations. The professionalism and creativity were top-notch!"</p>
+                <div class="client-name">- Abeedah Rana</div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="client-profile">
+                <img src="aryaann.jpg" alt="Client 2"> <!-- Replace with actual client image -->
+            </div>
+            <div>
+                <p>"Exceptional service with a personal touch. Highly recommend!"</p>
+                <div class="client-name">- Rana Aryaan </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>Follow us on:</p>
+        <div class="social-icons">
+            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+        <p>© 2024 MyWeb. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollTopBtn" onclick="scrollToTop()">↑</button>
+
+    <script>
+        // Scroll to Top Button functionality
+        window.onscroll = function() {
+            var btn = document.getElementById("scrollTopBtn");
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                btn.style.display = "block";
+            } else {
+                btn.style.display = "none";
+            }
+        };
+
+        function scrollToTop() {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+    </script>
+
+</body>
+</html>
+

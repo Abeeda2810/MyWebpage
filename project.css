@@ -1,0 +1,249 @@
+/* Global Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+/* Navbar Styles */
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+}
+
+.nav-header .nav-brand img {
+  width: 120px;
+}
+
+.nav-header i {
+  color: white;
+  cursor: pointer;
+}
+
+.nav-header .header-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.nav-header .header-links ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+.nav-header .header-links ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-header .header-links ul li a:hover {
+  color: #FF6363;
+}
+
+/* Sidebar Styles */
+.nav-screen {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 250px;
+  height: 100%;
+  background-color: #333;
+  transition: right 0.3s ease;
+  z-index: 9999;
+}
+
+.nav-screen.open {
+  right: 0;
+}
+
+.nav-screen .fa-times {
+  color: white;
+  font-size: 30px;
+  margin: 20px;
+  cursor: pointer;
+}
+
+.nav-screen .nav-container {
+  margin-top: 50px;
+}
+
+.nav-screen .nav-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.nav-screen .nav-links ul li {
+  padding: 10px 20px;
+}
+
+.nav-screen .nav-links ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+
+.nav-screen .nav-links ul li a:hover {
+  background-color: #FF6363;
+}
+
+/* Fullpage Sections */
+.section {
+  min-height: 100vh;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: relative;
+}
+
+.section h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.opaque-bg {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.opaque-bg h1 {
+  font-size: 3rem;
+  color: #FF6363;
+  text-align: center;
+}
+
+.bouncing {
+  animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-20px);
+  }
+}
+
+/* Skill Bar Styles */
+.container-skillbar {
+  width: 100%;
+  margin-top: 30px;
+}
+
+.skillbar {
+  position: relative;
+  margin: 20px 0;
+  height: 30px;
+  border-radius: 10px;
+  background-color: #e0e0e0;
+}
+
+.skillbar .skillbar-title {
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px 0 0 10px;
+}
+
+.skillbar .skillbar-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  border-radius: 10px;
+  transition: width 0.5s ease;
+}
+
+.skill-bar-percent {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  color: white;
+  font-weight: bold;
+  line-height: 30px;
+}
+
+/* Button Hover Effects */
+button {
+  background-color: #FF6363;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #FF3333;
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #003366;
+  color: white;
+  padding: 20px 0;
+}
+.footer a {
+  color: #ff6600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.footer a:hover {
+  color: #ffd700;
+}
+.footer i {
+  font-size: 1.5rem;
+  margin-right: 10px;
+  color: #ff6600;
+  transition: color 0.3s ease;
+}
+.footer i:hover {
+  color: #ffd700;
+}
+
+.social-links {
+  margin-top: 20px;
+}
+
+.social-links span {
+  margin: 0 10px;
+}
+
+.social-links i {
+  color: white;
+  font-size: 1.8rem;
+  transition: color 0.3s ease;
+}
+
+.social-links i:hover {
+  color: #FF6363;
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 768px) {
+  .nav-header .header-links ul li {
+      display: block;
+      margin: 10px 0;
+  }
+
+  .nav-screen {
+      width: 100%;
+  }
+
+  .nav-screen.open {
+      right: 0;
+  }
+}

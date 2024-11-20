@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Hobbies</title>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 36px;
+            margin: 20px 0;
+            color: #4a148c;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Hobbies Section */
+        .hobbies-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .hobby-card {
+            background-color: white;
+            border-radius: 10px;
+            width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden;
+        }
+
+        .hobby-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .hobby-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .hobby-card .content {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .hobby-card h3 {
+            font-size: 20px;
+            color: #4a148c;
+            margin-bottom: 10px;
+        }
+
+        .hobby-card p {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .hobby-card i {
+            font-size: 30px;
+            color: #ffd54f;
+            margin-bottom: 10px;
+        }
+
+        /* Footer Styling */
+        footer {
+            text-align: center;
+            background-color:palevioletred;
+            color: white;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        /* Back to Home Button */
+        .back-home {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 15px 30px;
+            background-color: #ffd54f;
+            color: blue;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 25px;
+            font-size: 16px;
+            transition: background-color 0.3s ease, transform 0.2s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .back-home:hover {
+            background-color: #fff4bf;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>My Hobbies</h1>
+
+    <div class="hobbies-container">
+        <!-- Hobby 1 -->
+        <div class="hobby-card">
+            <img src="Code.jpg" alt="Coding">
+            <div class="content">
+                <i class="fas fa-laptop-code"></i>
+                <h3>Coding</h3>
+                <p>I love solving problems and building innovative applications with my programming skills.</p>
+            </div>
+        </div>
+
+        <!-- Hobby 2 -->
+        <div class="hobby-card">
+            <img src="Game.jpg" alt="Gaming">
+            <div class="content">
+                <i class="fas fa-gamepad"></i>
+                <h3>Gaming</h3>
+                <p>Exploring new worlds in video games fuels my creativity and strategic thinking.</p>
+            </div>
+        </div>
+
+        <!-- Hobby 3 -->
+        <div class="hobby-card">
+            <img src="Photo.jpg" alt="Photography">
+            <div class="content">
+                <i class="fas fa-camera-retro"></i>
+                <h3>Photography</h3>
+                <p>Capturing moments and nature's beauty is one of my favorite ways to express creativity.</p>
+            </div>
+        </div>
+
+        <!-- Hobby 4 -->
+        <div class="hobby-card">
+            <img src="Book.jpg" alt="Reading">
+            <div class="content">
+                <i class="fas fa-book-reader"></i>
+                <h3>Reading</h3>
+                <p>Reading books on technology and fiction broadens my knowledge and imagination.</p>
+            </div>
+        </div>
+
+        <!-- Hobby 5 -->
+        <div class="hobby-card">
+            <img src="Music.jpg" alt="Music">
+            <div class="content">
+                <i class="fas fa-music"></i>
+                <h3>Listening to Music</h3>
+                <p>Music inspires me to stay focused and relax after a long day of coding.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Created by Abeedah</p>
+        <a href="main.html" class="back-home">← Back to Home</a>
+    </footer>
+
+</body>
+</html>

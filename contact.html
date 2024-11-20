@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        body {
+            background-color: #f2faff;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #555;
+            flex-direction: column; /* Added for button alignment */
+        }
+        .contact-container {
+            background-color: #ffffff;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: slideIn 1s ease-out;
+        }
+        .contact-container:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+        h2 {
+            text-align: center;
+            font-size: 36px;
+            color: palevioletred; /* Sky blue */
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: bold;
+            animation: fadeIn 1s ease-in-out;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        label {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        input, textarea {
+            padding: 12px;
+            border-radius: 8px;
+            border: 2px solid #ddd;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+        input:focus, textarea:focus {
+            border-color: #ff6f61; /* Soft pink */
+            outline: none;
+        }
+        textarea {
+            resize: vertical;
+            height: 150px;
+        }
+        button {
+            background-color: #E75480;
+            color: white;
+            font-size: 18px;
+            padding: 15px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: burlywood; /* Soft pink */
+        }
+        .back-home {
+            margin-top: 20px;
+            padding: 12px 30px;
+            font-size: 16px;
+            color: white;
+            background-color: #87ceeb; /* Light blue */
+            text-decoration: none;
+            border-radius: 25px;
+            text-align: center;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .back-home:hover {
+            background-color: plum; /* Steel blue */
+            transform: scale(1.05);
+        }
+        .error {
+            color: #ff6f61;
+            font-size: 14px;
+            text-align: center;
+            margin-top: 10px;
+        }
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes slideIn {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="contact-container">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" placeholder="Enter your message" required></textarea>
+            
+            <button type="submit">Send Message</button>
+        </form>
+        <div id="errorMessage" class="error"></div>
+    </div>
+
+    <!-- Back to Home Button -->
+    <a href="main.html" class="back-home">← Back to Home</a>
+
+    <script>
+        // Form validation function
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form from submitting immediately
+            
+            // Reset error message
+            document.getElementById('errorMessage').textContent = '';
+
+            // Get form values
+            var name = document.getElementById('name').value.trim();
+            var email = document.getElementById('email').value.trim();
+            var message = document.getElementById('message').value.trim();
+
+            // Regular expression for email validation
+            var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+
+            // Validate name
+            if (name === '') {
+                document.getElementById('errorMessage').textContent = 'Name is required.';
+                return;
+            }
+
+            // Validate email
+            if (email === '') {
+                document.getElementById('errorMessage').textContent = 'Email is required.';
+                return;
+            } else if (!emailPattern.test(email)) {
+                document.getElementById('errorMessage').textContent = 'Please enter a valid email address.';
+                return;
+            }
+
+            // Validate message
+            if (message === '') {
+                document.getElementById('errorMessage').textContent = 'Message is required.';
+                return;
+            }
+
+            // If all validations pass, display a success message or submit the form
+            alert('Your message has been sent successfully!');
+            // You can enable actual form submission here:
+            // event.target.submit();
+        });
+    </script>
+
+</body>
+</html>
